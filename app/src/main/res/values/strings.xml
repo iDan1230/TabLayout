@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TabLayout</string>
+
+    <string-array name="titles">
+        <item>C</item>
+        <item>C++</item>
+        <item>C#</item>
+        <item>Java EE</item>
+        <item>Android</item>
+        <item>IOS</item>
+        <item>PHP</item>
+        <item>GO</item>
+        <item>HTML</item>
+        <item>Python</item>
+        <item>Objective-C</item>
+        <item>JavaScript</item>
+        <item>Ruby</item>
+        <item>kotlin</item>
+    </string-array>
+</resources>

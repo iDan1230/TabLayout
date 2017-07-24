@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabLayout">
+        <!--标签总宽度（必须和系统的 android:layout_width 保持一致）-->
+        <attr name="view_width" format="dimension" />
+        <attr name="view_height" format="dimension" />
+
+        <!--每个标签中文字的样式-->
+        <!--点击选中时字体颜色-->
+        <attr name="label_text_color" format="reference" />
+        <!--字体大小-->
+        <attr name="label_text_size" format="dimension" />
+        <!--未选择时字体颜色-->
+        <attr name="unsele_text_color" format="reference" />
+        <!--指示标签的宽度-->
+        <attr name="label_size" format="dimension" />
+        <!--最多显示标签数-->
+        <attr name="label_count" format="integer" />
+
+    </declare-styleable>
+</resources>
