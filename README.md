@@ -24,13 +24,8 @@
         tab:unsele_text_color="@color/colorPrimary"//未选中时的颜色</br>
         tab:view_height="50dp"//空间真实的高度</br>
         tab:view_width="360dp"/>//控件真实的宽度，必须和layout_width一致</br>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#40000000"
-        />
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+    <android.support.v4.view.ViewPager</br>
+        android:id="@+id/pager"</br>
+        android:layout_width="match_parent"</br>
+        android:layout_height="match_parent"</br>
+        /></br>
