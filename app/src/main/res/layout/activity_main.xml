@@ -14,9 +14,9 @@
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         tab:label_count="4"
-        tab:label_size="2dp"
+        tab:label_size="4dp"
         tab:label_text_color="@color/c_main"
-        tab:label_text_size="15sp"
+        tab:label_text_size="16sp"
         tab:unsele_text_color="@color/colorPrimary"
         tab:view_height="50dp"
         tab:view_width="360dp"/>

@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -48,7 +49,7 @@ public class TabLayout extends HorizontalScrollView {
     //当前的指示线的起始位置
     private float lastStartX;
     //默认分20次移动到自动位置
-    private int MOVE_NUMBER = 20;
+    private int MOVE_NUMBER = 15;
     //当前移动的次数
     private int CURRENT_NUMBER = 0;
     //开始移动线
@@ -97,6 +98,7 @@ public class TabLayout extends HorizontalScrollView {
             view.setHeight(layoutHeight);
             view.setWidth((int) layoutWidth);
             view.setMaxLines(1);
+            view.setEllipsize(TextUtils.TruncateAt.END);
             if (i == 0) {
                 view.setTextSize(labelTextSize + 2);
                 view.setTextColor(labelTextColor);
@@ -135,13 +137,28 @@ public class TabLayout extends HorizontalScrollView {
         addView(linear);
     }
 
-
     public void setPager(ViewPager pager) {
         this.pager = pager;
         if (pager != null) {
             pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                    // TODO: 2017/7/24 版本2中实现 以下功能 
+//                    Log.e("msg","onPageScrolled :   positionOffset-> " + positionOffset +" positionOffsetPixels-> "+positionOffsetPixels);
+//                    Log.e("msg","比例: " +  positionOffsetPixels/viewWidth);
+//                    Log.e("msg","label moveto: " +  layoutWidth * positionOffsetPixels/viewWidth);
+//                    Log.e("msg","position: " +  position);
+//                    /**
+//                     * 向右拖动
+//                     */
+//                    if (position < selPosition)
+//                    {
+//                        Log.e("msg","xiang: " +  position);
+//                        smoothScrollTo((int) (linear.getWidth() - (linear.getChildCount() - selPosition) * layoutWidth - (viewWidth - layoutWidth) / 2 - layoutWidth * positionOffsetPixels/viewWidth), 0);
+//                    }else {//向左
+//                       smoothScrollTo((int) (linear.getWidth() - (linear.getChildCount() - selPosition) * layoutWidth - (viewWidth - layoutWidth) / 2 + layoutWidth * positionOffsetPixels/viewWidth), 0);
+//
+//                    }
 
                 }
 
@@ -155,7 +172,7 @@ public class TabLayout extends HorizontalScrollView {
 
                 @Override
                 public void onPageScrollStateChanged(int state) {
-
+                    Log.e("msg","state: " +  state);
                 }
             });
 
