@@ -10,8 +10,7 @@
 ![image](https://github.com/yangzhidan/TabLayout/blob/master/pic/Screenshot_2017-07-27-09-48-59.png)</br></br>
 
 
-二、用法</br></br>
-、、、
+二、用法 xml中</br></br>
     <!--layout_width 和 view_width 必须保持一致, 不支持px布局--></br>
     <tab.tablayout.TabLayout</br>
         android:id="@+id/tablayout"</br>
@@ -29,4 +28,10 @@
         android:layout_width="match_parent"</br>
         android:layout_height="match_parent"</br>
         /></br>
-  、、、
+        
+ 三、用法 代码中</br></br>
+        List<String> stringList = new ArrayList<>();</br>
+        tablayout.setLabelTitles(stringList);</br>
+        如果想要和ViewPager联动就加上下面两句
+        pager.setAdapter(new myPagerAdapter(stringList));</br>
+        tablayout.setPager(pager);</br>
