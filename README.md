@@ -32,6 +32,6 @@
  三、用法 代码中</br></br>
         List<String> stringList = new ArrayList<>();</br>
         tablayout.setLabelTitles(stringList);</br>
-        如果想要和ViewPager联动就加上下面两句
+        如果想要和ViewPager联动就加上下面两句</br>
         pager.setAdapter(new myPagerAdapter(stringList));</br>
         tablayout.setPager(pager);</br>
