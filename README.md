@@ -11,7 +11,7 @@
 
 
 二、用法</br></br>
-
+、、、
     <!--layout_width 和 view_width 必须保持一致, 不支持px布局--></br>
     <tab.tablayout.TabLayout</br>
         android:id="@+id/tablayout"</br>
@@ -29,3 +29,4 @@
         android:layout_width="match_parent"</br>
         android:layout_height="match_parent"</br>
         /></br>
+  、、、
